@@ -100,9 +100,9 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 1.2;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.24;
     color: #2D2D2D;
 }
 
@@ -120,12 +120,12 @@ nav {
 .hire-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     margin-top: 30px;
     background: #FFB400;
     color: #2D2D2D;
-    padding: 14px 32px;
-    border-radius: 4px;
+    padding: 16px 32px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -149,23 +149,24 @@ nav {
 
 /* ==================== SHARED SECTION STYLES ==================== */
 .section-container {
-    padding: 60px 96px;
+    padding: 84px 96px;
 }
 
 .section-title {
     font-size: 32px;
     font-weight: 700;
+    line-height: 1.24;
     color: #2D2D2D;
     text-align: center;
     margin-bottom: 12px;
 }
 
 .section-subtitle {
-    font-size: 14px;
+    font-size: 15px;
     color: #767676;
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 45px auto;
     line-height: 1.6;
 }
 
@@ -177,12 +178,12 @@ nav {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 45px;
 }
 
 .project-card {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -194,19 +195,20 @@ nav {
 
 .project-image img {
     width: 100%;
-    height: 200px;
+    height: 258px;
     object-fit: cover;
 }
 
 .project-info {
-    padding: 20px;
+    padding: 16px 16px 20px 16px;
 }
 
 .project-info h3 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
+    line-height: 1.5;
     color: #2D2D2D;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .project-info p {
@@ -219,17 +221,16 @@ nav {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 6px;
 }
 
 .tag {
     font-size: 11px;
-    padding: 4px 10px;
-    border: 1px solid #E0E0E0;
-    border-radius: 4px;
+    padding: 4px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
     color: #767676;
-    background: #F9F9F9;
 }
 
 /* ==================== RECOMMENDATIONS SECTION ==================== */
@@ -245,15 +246,15 @@ nav {
 
 .carousel-track {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     transition: transform 0.5s ease;
 }
 
 .recommendation-card {
-    min-width: calc(33.333% - 20px);
+    min-width: 340px;
     background: #fff;
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px;
     flex-shrink: 0;
 }
 
@@ -266,13 +267,14 @@ nav {
 
 .recommendation-card h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 1.24;
     color: #2D2D2D;
     margin-bottom: 12px;
 }
 
 .recommendation-card p {
-    font-size: 14px;
+    font-size: 15px;
     color: #767676;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -292,13 +294,17 @@ nav {
 }
 
 .reviewer-name {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.24;
     color: #2D2D2D;
+    margin-bottom: 2px;
+    display: block;
 }
 
 .reviewer-role {
-    font-size: 12px;
+    font-size: 15px;
+    line-height: 1.6;
     color: #767676;
     display: block;
 }
@@ -332,12 +338,16 @@ nav {
 
 .contact-container {
     display: flex;
-    gap: 60px;
-    padding: 60px 96px;
+    gap: 25px;
+    padding: 84px 96px;
 }
 
-.contact-form, .contact-info {
-    flex: 1;
+.contact-form {
+    flex: 0 0 846px;
+}
+
+.contact-info {
+    flex: 0 0 373px;
 }
 
 .contact-heading {
@@ -355,19 +365,44 @@ nav {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.24;
+    color: #767676;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 15px;
+    padding: 0 15px;
     background: #F0F0F6;
     border: none;
-    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input {
+    height: 50px;
+}
+
+.form-group textarea {
+    height: 210px;
+    padding: 15px;
+    resize: vertical;
+}
+
+.form-group input, .form-group textarea {
     font-family: inherit;
     font-size: 14px;
     color: #2D2D2D;
     transition: background 0.3s ease;
+    border-radius: 5px;
 }
 
 .form-group input:focus, .form-group textarea:focus {
@@ -381,14 +416,14 @@ nav {
 
 .send-btn {
     background: #FFB400;
-    color: #fff;
+    color: #000000;
     border: none;
-    padding: 14px 32px;
+    padding: 17px 16px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
+    line-height: 1;
     text-transform: uppercase;
-    letter-spacing: 1px;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     transition: background 0.3s ease;
@@ -434,27 +469,33 @@ nav {
 }
 
 .info-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #2D2D2D;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.24;
+    color: #767676;
+    width: 120px;
 }
 
 .info-value {
-    font-size: 14px;
-    color: #767676;
+    font-size: 15px;
+    color: #2D2D2D;
+    flex: 1;
+    text-align: right;
 }
 
 /* ==================== CLIENT LOGOS SECTION ==================== */
 #clients {
-    background-color: #F0F0F6;
+    background-color: #fff;
+    padding-top: 335px;
 }
 
 .clients-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 60px;
-    padding: 40px 96px;
+    padding-bottom: 60px;
+    max-width: 970px;
+    margin: 0 auto;
 }
 
 .client-logo {
@@ -471,21 +512,21 @@ nav {
 
 /* ==================== FOOTER ==================== */
 footer {
-    background-color: #fff;
+    background-color: #F0F0F6;
     color: #2D2D2D;
+    padding: 45px 96px 45px;
 }
 
 .footer-container {
-    padding: 60px 96px 30px 96px;
+    max-width: 1244px;
+    margin: 0 auto;
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #DFDFDF;
+    margin-bottom: 50px;
 }
 
 .footer-logo-col {
