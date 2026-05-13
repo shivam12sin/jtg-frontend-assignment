@@ -32,15 +32,20 @@ img {
 }
 
 /* ==================== NAVBAR ==================== */
+header {
+    background-color: #ffffff;
+    box-shadow: 4px 10px 10px 0px rgba(47, 122, 249, 0.10);
+    position: relative;
+    z-index: 100;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 38px 96px;
-    background-color: #ffffff;
-    box-shadow: 4px 10px 10px 0px rgba(47, 122, 249, 0.10);
-    position: relative;
-    z-index: 100;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .nav-links {
@@ -96,6 +101,8 @@ nav {
     align-items: center;
     padding: 60px 96px;
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* Floating Shapes */
@@ -105,8 +112,8 @@ nav {
 }
 
 .hero-content {
-    max-width: 50%;
-    z-index: 1;
+    flex: 0 0 52%;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -148,18 +155,28 @@ nav {
 }
 
 .hero-image {
-    max-width: 45%;
+    flex: 0 0 48%;
+    position: relative;
     z-index: 1;
+    min-height: 550px;
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    width: 808px;
+    max-width: none;
+    right: -96px;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
+
 
 /* ==================== SHARED SECTION STYLES ==================== */
 .section-container {
     padding: 84px 96px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .section-title {
@@ -349,6 +366,8 @@ nav {
     display: flex;
     gap: 25px;
     padding: 84px 96px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .contact-form {
@@ -396,7 +415,8 @@ nav {
     text-align: left;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 0 15px;
     background: #F0F0F6;
@@ -414,7 +434,8 @@ nav {
     resize: vertical;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     font-family: inherit;
     font-size: 14px;
     color: #2D2D2D;
@@ -422,7 +443,8 @@ nav {
     border-radius: 5px;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
     background: #E8E8E8;
 }
@@ -586,7 +608,8 @@ footer {
 .footer-links-wrapper {
     display: flex;
     gap: 80px;
-    padding-top: 84px; /* Aligns with the rating badges */
+    padding-top: 84px;
+    /* Aligns with the rating badges */
 }
 
 .footer-links h4 {
@@ -635,15 +658,21 @@ footer {
 /* ==================== RESPONSIVE DESIGN (MEDIA QUERIES) ==================== */
 
 @media (max-width: 1024px) {
-    nav, .hero-container, .section-container, .contact-container, .clients-container, .footer-container {
+
+    nav,
+    .hero-container,
+    .section-container,
+    .contact-container,
+    .clients-container,
+    .footer-container {
         padding-left: 40px;
         padding-right: 40px;
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .recommendation-card {
         min-width: calc(50% - 15px);
     }
@@ -654,7 +683,7 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
@@ -666,7 +695,8 @@ footer {
         gap: 40px;
     }
 
-    .hero-content, .hero-image {
+    .hero-content,
+    .hero-image {
         max-width: 100%;
     }
 
