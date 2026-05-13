@@ -8,6 +8,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F0F0F6;
+    color: #2D2D2D;
 }
 
 ul {
@@ -35,7 +36,8 @@ img {
 header {
     background-color: #ffffff;
     box-shadow: 4px 10px 10px 0px rgba(47, 122, 249, 0.10);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 100;
 }
 
@@ -51,7 +53,7 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 38px;
 }
 
 .nav-links a {
@@ -99,10 +101,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 96px;
+    min-height: 630px;
+    padding: 32px 96px 0;
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* Floating Shapes */
@@ -112,7 +116,7 @@ nav {
 }
 
 .hero-content {
-    flex: 0 0 52%;
+    flex: 0 0 50%;
     z-index: 2;
 }
 
@@ -121,6 +125,7 @@ nav {
     font-weight: 700;
     line-height: 1.24;
     color: #2D2D2D;
+    max-width: 650px;
 }
 
 .highlight {
@@ -129,6 +134,7 @@ nav {
 
 .hero-content p {
     margin-top: 20px;
+    max-width: 600px;
     font-size: 16px;
     line-height: 1.6;
     color: #767676;
@@ -155,26 +161,25 @@ nav {
 }
 
 .hero-image {
-    flex: 0 0 48%;
+    flex: 0 0 50%;
     position: relative;
     z-index: 1;
-    min-height: 550px;
+    min-height: 540px;
 }
 
 .hero-image img {
     position: absolute;
     width: 808px;
     max-width: none;
-    right: -96px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: -82px;
+    bottom: 0;
 }
 
 
 
 /* ==================== SHARED SECTION STYLES ==================== */
 .section-container {
-    padding: 84px 96px;
+    padding: 88px 96px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -192,7 +197,7 @@ nav {
     font-size: 15px;
     color: #767676;
     text-align: center;
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto 45px auto;
     line-height: 1.6;
 }
@@ -222,7 +227,7 @@ nav {
 
 .project-image img {
     width: 100%;
-    height: 258px;
+    height: 256px;
     object-fit: cover;
 }
 
@@ -282,6 +287,7 @@ nav {
     background: #fff;
     border-radius: 10px;
     padding: 25px;
+    text-align: left;
 }
 
 .stars {
@@ -313,8 +319,8 @@ nav {
 }
 
 .reviewer img {
-    width: 44px;
-    height: 44px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -365,19 +371,22 @@ nav {
 .contact-container {
     display: flex;
     gap: 25px;
-    padding: 84px 96px;
+    padding: 88px 96px 72px;
     max-width: 1440px;
     margin: 0 auto;
 }
 
 .contact-form {
-    flex: 0 0 846px;
+    flex: 1 1 auto;
+    max-width: 846px;
+    min-width: 0;
 }
 
 .contact-info {
     flex: 0 0 373px;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .info-cards-wrapper {
@@ -397,7 +406,7 @@ nav {
 .contact-card {
     background: #fff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .form-group {
@@ -534,15 +543,15 @@ nav {
 
 .clients-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 60px;
+    padding: 0 96px 60px;
     max-width: 970px;
     margin: 0 auto;
 }
 
 .client-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     opacity: 0.8;
@@ -557,7 +566,7 @@ nav {
 footer {
     background-color: #F0F0F6;
     color: #2D2D2D;
-    padding: 45px 96px 45px;
+    padding: 45px 96px 32px;
 }
 
 .footer-container {
@@ -578,7 +587,7 @@ footer {
 }
 
 .main-logo {
-    width: 120px;
+    width: 140px;
     margin-bottom: 60px;
 }
 
@@ -636,8 +645,8 @@ footer {
 }
 
 .connect-icons img {
-    height: 24px;
-    width: auto;
+    width: 100px;
+    height: auto;
     transition: opacity 0.3s ease;
 }
 
